@@ -1,0 +1,21 @@
+<!-- post.wxml -->
+<view class="container">
+  <!-- 使用picker组件替代input输入框 -->
+  <picker 
+    mode="selector" 
+    range="{{postCategories}}" 
+    value="{{categoryIndex}}"
+    bindchange="onCategoryChange"
+  >
+    <view class="picker">
+      {{postCategories[categoryIndex]}}
+    </view>
+  </picker>
+  
+  <textarea 
+    placeholder="内容" 
+    bindinput="onContentInput" 
+  ></textarea>
+  
+  <button bindtap="submit">发布帖子</button>
+</view>

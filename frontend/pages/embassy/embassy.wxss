@@ -1,0 +1,90 @@
+.embassy-page {
+  padding: 20rpx;
+  background-color: #f8f8f8;
+}
+
+.my-subscribe-box {
+  
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.title-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx; /* 图标文字间距 */
+}
+
+.title-text {
+  font-size: 34rpx;
+  line-height: 60rpx; /* 与图标高度一致 */
+  color: #333;
+  vertical-align: middle;
+}
+.subscribe-title {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: flex-start; /* 水平左对齐 */
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+
+.subscribe-item {
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.subscribe-item:last-child {
+  border-bottom: none;
+}
+/* 导航标签样式 */
+.nav-tabs {
+  display: flex;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.tab-item.active {
+  color: #FFA500;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.message-list {
+  background-color: white;
+  border-radius: 10rpx;
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.message-index {
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #ff4d4f;
+  color: white;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+
+.message-text {
+  flex: 1;
+  font-size: 28rpx;
+  color: #666;
+}

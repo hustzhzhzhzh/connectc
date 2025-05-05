@@ -1,0 +1,28 @@
+<view class="container">
+  <!-- 标题 -->
+  <view class="header">
+    <text class="title">社区帖子</text>
+    <text class="subtitle">全部内容</text>
+  </view>
+  
+  <!-- 帖子列表 -->
+  <scroll-view scroll-y class="post-list">
+    <block wx:for="{{posts}}" wx:key="id">
+      <view class="post-item" bindtap="navigateToDetail" data-id="{{item.id}}">
+        <view class="post-info">
+          <text class="post-title">分类：{{item.title}}</text>
+          <text class="post-author">作者: {{item.author || '匿名'}}</text>
+          <text class="post-time">{{item.created_at}}</text>
+        </view>
+        <view class="post-content">{{item.content}}</view>
+        <view class="divider"></view>
+      </view>
+    </block>
+    
+    <!-- 无数据提示 -->
+    <view wx:if="{{posts.length === 0}}" class="no-data">
+      <image src="/images/no-data.png" mode="aspectFit" class="no-data-image" />
+      <text class="no-data-text">暂无帖子</text>
+    </view>
+  </scroll-view>
+</view>

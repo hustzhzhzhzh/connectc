@@ -1,0 +1,20 @@
+<!-- pages/role/role.wxml -->
+<view class="role-container">
+  <view class="role-options">
+    <button class="role-btn studying" bindtap="navigateToAuth">
+  <view class="btn-content">
+    <image class="btn-icon" src="../../static/1.png"></image>
+    <text class="btn-text">留学中</text>
+  </view>
+</button>
+    <button class="role-btn graduated" bindtap="navigateToAuth">
+      <view class="btn-content">
+    <image class="btn-icon" src="../../static/2.png"></image>
+    <text class="btn-text">留学结束</text>
+  </view></button>
+    <button class="role-btn visitor" bindtap="navigateToIndex"> <view class="btn-content">
+    <image class="btn-icon" src="../../static/3.png"></image>
+    <text class="btn-text">游客</text>
+  </view></button>
+  </view>
+</view>

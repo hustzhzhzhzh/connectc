@@ -1,0 +1,50 @@
+<view class="embassy-page">
+  <!-- 我的订阅模块 -->
+  <view class="my-subscribe-box">
+    <view class="subscribe-title">
+    <image src="../../static/11.png" class="title-icon"
+    mode="aspectFit"></image>
+    <text class="title-text">我的订阅</text>
+    </view>
+    <view class="subscribe-item" bindtap="navigateToNews" data-url="http://newyork.china-consulate.gov.cn/chn/tzgg/t1799819.htm">
+      <text>驻纽约领事馆——提醒在美中国留学人员加强安全防范</text>
+    </view>
+    <view class="subscribe-item" bindtap="navigateToNews" data-url="http://gb.china-embassy.gov.cn/sgxw/202503/t20250320_11578879.htm">
+      <text>驻英国大使馆——王起临时代办等参加2025年伦敦书展相关活动</text>
+    </view>
+  </view>
+
+  <!-- 消息内容模块 -->
+  <view class="message-content">
+    <view class="nav-tabs">
+    <view 
+      class="tab-item {{activeTab === 0 ? 'active' : ''}}" 
+      bindtap="switchTab" 
+      data-index="0"
+    >热门</view>
+    <view 
+      class="tab-item {{activeTab === 1 ? 'active' : ''}}" 
+      bindtap="switchTab" 
+      data-index="1"
+    >最新</view>
+    <view 
+      class="tab-item {{activeTab === 2 ? 'active' : ''}}" 
+      bindtap="switchTab" 
+      data-index="2"
+    >政策</view>
+    <view 
+      class="tab-item {{activeTab === 3 ? 'active' : ''}}" 
+      bindtap="switchTab" 
+      data-index="3"
+    >在线咨询</view>
+  </view>
+    <view class="message-list">
+      <block wx:for="{{messageList}}" wx:key="id">
+        <view class="message-item" bindtap="navigateToNews" data-url="{{item.url}}">
+          <view class="message-index">{{index + 1}}</view>
+          <view class="message-text">{{item.content}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

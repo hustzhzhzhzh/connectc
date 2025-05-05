@@ -1,0 +1,89 @@
+/* pages/role/role.wxss */
+.role-container {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.photo-container {
+  width: 100%;
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.role-photo {
+  width: 100%;
+  height: auto;
+  max-width: 600rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.role-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40rpx;
+}
+
+/* 按钮基础样式 */
+.role-btn {
+  width: 80%;
+  height: 100rpx;
+  border-radius: 50rpx;
+  padding: 0;
+  position: relative;
+}
+
+/* 内容容器 */
+.btn-content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 32%;
+  transform: translateX(-50%);
+}
+
+/* 图标样式 */
+.btn-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 100rpx;
+}
+
+/* 文字样式 */
+.btn-text {
+  font-size: 38rpx;
+  color: white;
+  font-weight: bold;
+}
+.role-btn:active {
+  opacity: 0.9;
+}
+
+.studying {
+  background-color: #F78235; /* 橙色 */
+}
+
+.graduated {
+  background-color: #51C9EC; /* 蓝色 */
+}
+
+.visitor {
+  background-color: #51BD82; /* 绿色 */
+}

@@ -1,0 +1,85 @@
+<!-- 顶部导航 -->
+<view class="nav-bar">
+  <block wx:for="{{tabs}}" wx:key="index">
+    <view 
+      class="nav-item {{activeTab === index ? 'active' : ''}}" 
+      bindtap="switchTab" 
+      data-index="{{index}}"
+    >{{item}}</view>
+  </block>
+</view>
+
+<!-- 计算器主体 -->
+<view class="container" wx:if="{{activeTab === 0}}">
+  <!-- 货币选择 -->
+  <view class="select-group">
+    <text >请选择货币单位：</text>
+    <picker value="{{currencyIndex}}" range="{{currencies}}" bindchange="changeCurrency">
+      <view class="select-box">
+        <text>{{currencies[currencyIndex]}}</text>
+        <image src="../../static/12.png" class="arrow"/>
+      </view>
+    </picker>
+    
+  </view>
+
+  <!-- 输入表格 -->
+  <view class="input-table">
+    <block wx:for="{{inputs}}" wx:key="key">
+      <view class="input-row">
+        <text class="label">{{item.label}}</text>
+        <view class="input-wrapper">
+          <input 
+            type="number" 
+            placeholder="{{item.placeholder}}"
+            value="{{item.value}}"
+            bindinput="bindInput"
+            data-key="{{item.key}}"
+          />
+          <text class="unit">{{item.unit}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 学年选择 -->
+  <view class="select-group">
+  <text>请选择留学年数：</text>
+    <picker value="{{yearIndex}}" range="{{years}}" bindchange="changeYear">
+      <view class="select-box">
+        <text>{{years[yearIndex]}}</text>
+        <image src="../../static/12.png" class="arrow"/>
+      </view>
+    </picker>
+    <!-- 操作按钮 -->
+  <button class="calc-btn" bindtap="calculate">计算</button>
+  </view>
+
+  
+
+  <!-- 结果展示 -->
+  <view class="result-card" wx:if="{{showResult}}">
+    <view class="result-item">
+      <text>年度总费用</text>
+      <text class="value">{{annualTotal}} {{currencies[currencyIndex]}}</text>
+    </view>
+    <view class="result-item">
+      <text>一次性费用</text>
+      <text class="value">{{oneTimeCost}} {{currencies[currencyIndex]}}</text>
+    </view>
+    <view class="total-row">
+      <text>留学总费用</text>
+      <text class="total-value">{{totalCost}} {{currencies[currencyIndex]}}</text>
+    </view>
+    <view class="cny-row" wx:if="{{currencyIndex !== 1}}">
+      <text>折合人民币</text>
+      <text class="cny-value">￥{{cnyTotal}}</text>
+    </view>
+    
+    
+  </view>
+  <!-- 记账按钮 -->
+  <button class="record-btn" bindtap="navToRecord">
+      <image src="../../static/13.png" class="btn-icon"/>
+    </button>
+</view>

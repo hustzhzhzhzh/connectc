@@ -1,0 +1,185 @@
+/* 导航栏 */
+.nav-bar {
+  display: flex;
+  height: 88rpx;
+  background: #fff;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.08);
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  line-height: 88rpx;
+  color: #666;
+  font-size: 30rpx;
+  transition: all 0.3s;
+}
+
+.nav-item.active {
+  color: #FFA500;
+  font-size: 30rpx;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64rpx;
+  height: 4rpx;
+  background: #FFA500;
+}
+
+/* 输入表格 */
+.input-table {
+  margin: 10rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  border-radius: 16rpx;
+  background: #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.input-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  width: 240rpx;
+  color: #666;
+}
+
+.input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unit {
+  color: #FFA500;
+  margin-left: 20rpx;
+}
+
+/* 结果卡片 */
+.result-card {
+  margin: 40rpx;
+  padding: 40rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.total-row {
+  margin-top: 40rpx;
+  padding-top: 40rpx;
+  border-top: 2rpx solid #eee;
+}
+
+.total-value {
+  color: #FF8C00;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.cny-row {
+  margin-top: 30rpx;
+  padding-top: 30rpx;
+  border-top: 1rpx dashed #eee;
+  color: #999;
+}
+/* 输入项单位样式 */
+.unit {
+  color: #FFA500;
+  min-width: 120rpx;
+  text-align: right;
+}
+
+/* 固定人民币单位特殊样式 */
+.input-row:nth-child(5) .unit {
+  color: #52c41a; /* 绿色突出显示 */
+  font-weight: bold;
+}
+/* 记账按钮 */
+.record-btn {
+  margin-top: 0rpx;
+  margin-bottom: 5rpx;
+  background: transparent;
+  margin-left: 60%;
+  margin-right: 5%;
+  border:none;
+  height: 120rpx;
+}
+.btn-icon {
+  width: 150rpx;
+  height: 100rpx;
+}
+
+/* ==================== 下拉选择器通用样式 ==================== */
+.select-group, .year-select {
+  display: flex;
+  align-items: center;
+}
+.select-group text {
+  margin-left: 5%;
+  margin-right: 5px;
+}
+/* 选择框容器 */
+.select-box {
+  width: 200rpx;
+  height: 88rpx; /* 标准输入框高度 */
+  margin: 10rpx;
+  margin-top: 30rpx;
+  padding: 0 40rpx;
+  border: 2rpx solid #FFA500; /* 品牌色边框 */
+  border-radius: 12rpx; /* 圆角稍大于输入框 */
+  background: #fff;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s; /* 平滑过渡效果 */
+}
+
+/* 激活态样式 */
+.select-box:hover, .select-box:active {
+  border-color: #FF8C00; /* 深橙色反馈 */
+  box-shadow: 0 4rpx 12rpx rgba(255,140,0,0.1); /* 微投影 */
+}
+
+/* 样式 */
+.arrow {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 50rpx;
+  transition: transform 0.3s; /* 旋转动画 */
+}
+
+/* 展开状态箭头旋转 */
+.picker-item-active .arrow {
+  transform: rotate(180deg);
+}
+.calc-btn{
+  flex: 1;
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  width: 20%;
+  height: 60rpx;
+  padding: 5px;
+  background-color: #4095E5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

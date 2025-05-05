@@ -1,0 +1,140 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 顶部橙色背景区域 -->
+  <view class="top-section">
+    <!-- 搜索栏 -->
+    <view class="search-bar">
+      <image src="../../static/5.png" class="search-icon"/>
+      <input 
+        placeholder="搜索" 
+        placeholder-class="placeholder-style"
+        class="search-input"
+      />
+      
+    </view>
+
+    <!-- 轮播图 -->
+    <swiper 
+      class="swiper-container" 
+      indicator-dots="{{true}}" 
+      autoplay="{{true}}" 
+      interval="3000"
+    >
+      <swiper-item>
+        <image src="../../static/logo1.png" style="align-items: center;" mode="aspectFill"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../static/logo2.png" mode="aspectFill"/>
+      </swiper-item>
+    </swiper>
+
+    <!-- 功能按钮 -->
+    <view class="function-grid">
+      <view class="grid-item" bindtap="navToEmbassyHot">
+        <image src="../../static/6.png"/>
+      </view>
+      <view class="grid-item" bindtap="navToCommunity">
+        <image src="../../static/7.png"/>
+      </view>
+      <view class="grid-item" bindtap="navToCalculator">
+        <image src="../../static/8.png"/>
+      </view>
+      <view class="grid-item emergency" bindtap="showEmergencyCall">
+        <image src="../../static/9.png"/>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部白色背景区域 -->
+  <view class="bottom-section">
+    <!-- 签证提醒 -->
+     <view class="section-title">签证提醒（可自定义事件提醒）</view>
+       
+  <!-- 时间显示 -->
+  <view class="time-display">
+    <view class="time-item" >
+      <text class="time-label">开始时间</text>
+      <input 
+      value="{{startDate}}" 
+      bindinput="handleInput1" 
+      placeholder-style="color:#999;"
+    />
+    </view>
+    <view class="time-item">
+      <text class="time-label">当前时间</text>
+      <text class="time-value">{{currentDate}}</text>
+      <button class="tt-btn"bindtap="doCalculation">计算</button>
+    </view>
+    <view class="time-item">
+      <text class="time-label">到期时间</text>
+      <input 
+      value="{{endDate}}" 
+      bindinput="handleInput2" 
+      placeholder-style="color:#999;"
+    />
+    </view>
+   
+
+  <!-- 进度条 -->
+  <progress 
+    percent="{{progress}}" 
+    stroke-width="12" 
+    active-color="#FFA500" 
+    backgroundColor="#EEEEEE"
+    show-info
+  >剩余</progress>
+
+  <!-- 剩余天数显示 -->
+  <view class="remaining-days">
+    <text>剩余时间：{{remainingDays}}天</text>
+  </view>
+</view>
+
+<!-- 地址选择行 -->
+<view class="location-row">
+  <view class="section-title">信息   </view>
+      <picker class="location-picker" value="{{selectedIndex}}" range="{{locations}}" bindchange="bindPickerChange">
+       <view class="picker-content">
+         {{locations[selectedIndex]}}
+       </view>
+     </picker>
+     <!-- 显示选择结果 -->
+<view class="address-display" wx:if="{{selectedAddress}}">
+  <text>已选位置：{{selectedAddress.name}}</text>
+  <text>详细地址：{{selectedAddress.address}}</text>
+</view>
+     <button class="location-btn" bindtap="getWechatLocation">
+       <image src="../../static/10.png" class="location-icon"/>
+     </button>
+   </view>
+  
+      <!-- 底部信息模块 -->
+    <view class="info-section">
+     
+
+  <!-- 信息表格 -->
+  <view class="info-table">
+    <block wx:for="{{currentData}}" wx:key="id">
+      <view class="info-item">
+        <text class="number">{{index + 1 + (currentPage-1)*4}}.</text>
+        <text class="title">{{item.title}}</text>
+        <text class="number1">{{item.phone}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 分页控制 -->
+  <view class="pagination">
+    <text class="page-btn" bindtap="prevPage">上一页</text>
+    <text class="page-info">{{currentPage}}/{{totalPages}}</text>
+    <text class="page-btn" bindtap="nextPage">下一页</text>
+  </view>
+   </view>
+
+    
+        
+     
+
+    
+  </view>
+</view>

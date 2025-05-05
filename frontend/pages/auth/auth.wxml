@@ -1,0 +1,19 @@
+<view class="auth-container">
+  <image class="logo" src="../../static/logo2.png"></image>
+  
+  <button 
+    class="auth-btn" 
+    open-type="getPhoneNumber" 
+    bindgetphonenumber="getPhoneNumber"
+  >
+  <image class="auth-icon" src="../../static/4.png"></image>
+  <text>微信授权手机号登录</text>
+</button>
+  
+  <view class="agreement">
+    <checkbox checked="{{agreed}}" bindtap="toggleAgreement"/>
+    <text>已阅读并同意《用户服务协议》和《隐私政策》</text>
+  </view>
+  
+  <button class="guest-btn" bindtap="guestLogin">游客登录</button>
+</view>

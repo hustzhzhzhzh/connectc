@@ -1,0 +1,63 @@
+/* 页面容器样式 */
+.container {
+  padding: 24rpx;
+  max-width: 680rpx;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 输入框通用样式 */
+input, textarea {
+  width: 100%;
+  padding: 20rpx;
+  border: 1rpx solid #eeeeee;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.picker {
+  padding: 20rpx;
+  border: 1px solid #eee;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+/* 输入框聚焦效果 */
+input:focus, textarea:focus {
+  border-color: #07c160;
+  box-shadow: 0 0 6rpx rgba(7, 193, 96, 0.2);
+}
+
+/* 文本域多行样式 */
+textarea {
+  min-height: 300rpx;
+  line-height: 1.6;
+  resize: vertical; /* 允许垂直方向调整大小 */
+}
+
+/* 提交按钮样式 */
+button {
+  width: 100%;
+  padding: 24rpx 0;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: white;
+  background-color: #07c160;
+  border-radius: 8rpx;
+  border: none;
+  cursor: pointer;
+}
+
+/* 按钮悬停效果 */
+button:hover {
+  opacity: 0.9;
+  background-color: #06b056;
+}
+
+/* 按钮加载状态 */
+button[loading] {
+  background-color: #07c16080;
+  cursor: not-allowed;
+}

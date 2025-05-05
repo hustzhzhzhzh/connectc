@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/role/role",
+    "pages/auth/auth",
+    "pages/index/index",
+    "pages/embassy/embassy",
+    "pages/community/community",
+    "pages/tools/tools",
+    "pages/profile/profile",
+    "pages/embassy/embassy2",
+    "pages/news/detail",
+    "pages/tools/tools2",
+    "pages/profile/1",
+    "pages/community/post",
+    "pages/community/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFD700",
+    "navigationBarTitleText": "ConnectC",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F5F5"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#FFD700",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/t1.png",
+        "selectedIconPath": "static/t1.png"
+      },
+      {
+        "pagePath": "pages/embassy/embassy",
+        "text": "大使馆",
+        "iconPath": "static/t2.png",
+        "selectedIconPath": "static/t2.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "static/t3.png",
+        "selectedIconPath": "static/t3.png"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "text": "工具",
+        "iconPath": "static/t4.png",
+        "selectedIconPath": "static/t4.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "static/t5.png",
+        "selectedIconPath": "static/t5.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于获取位置信息"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "*"
+  ],
+  "usingComponents": {},
+  "webview": {
+    "allowedDomains": [
+      "newyork.china-consulate.gov.cn",
+      "gb.china-embassy.gov.cn",
+      "th.china-embassy.gov.cn",
+      "us.china-embassy.gov.cn"
+    ]
+  }
+}

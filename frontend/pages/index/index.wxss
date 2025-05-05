@@ -1,0 +1,276 @@
+/* pages/index/index.wxss */
+/* 容器样式 */
+.container {
+  min-height: 100vh;
+}
+
+/* 顶部橙色区域 */
+.top-section {
+  background: #FCCA00;
+  padding: 20rpx 25rpx 40rpx;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+
+/* 搜索栏 */
+.search-bar {
+  background:  white;
+  border-radius: 40rpx;
+  padding: 20rpx 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 水平居中 */
+  width: 90%;
+  margin: 20rpx auto; /* 水平居中 */
+}
+
+.search-input {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.search-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 15rpx; /* 图标与输入框间距 */
+}
+/* 容器样式 */
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45rpx;
+  background: #FCCA00; /* 橙色背景 */
+  border-radius: 16rpx;
+}
+
+/* 轮播图主体 */
+.custom-swiper {
+  width: 90%; /* 控制显示宽度 */
+  height: 320rpx; /* 固定高度 */
+}
+
+/* 图片样式 */
+.swiper-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+/* 功能按钮网格 */
+.function-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10rpx;
+}
+
+.grid-item {
+  background: #FCCA00;
+  border-radius: 25rpx;
+  padding: 10rpx;
+  text-align: center;
+}
+
+.grid-item image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+/* 底部hui色区域 */
+.bottom-section {
+  background: #EFEFEF;
+  padding: 30rpx 25rpx;
+}
+
+
+/* 底部信息模块样式 */
+.info-section {
+  background: #fff;
+  padding: 30rpx;
+  margin: 20rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 10rpx rgba(255,165,0,0.1);
+}
+
+/* 地址选择行 */
+.location-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0rpx;
+}
+
+.location-picker {
+  flex: 1;
+  border: 1rpx solid #FFA500;
+  border-radius: 40rpx;
+  padding: 15rpx 50rpx;
+  margin-left: 200rpx; 
+}
+
+.picker-content {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.arrow-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 15rpx;
+}
+
+.location-btn {
+  margin-left: 20rpx;
+  background: #EFEFEF;
+  border-radius: 40rpx;
+  padding: 15rpx 25rpx;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+}
+
+.location-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 10rpx;
+}
+
+/* 信息表格 */
+.info-table {
+  border: 1rpx solid #EEE;
+  border-radius: 12rpx;
+}
+
+.info-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #EEE;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.number {
+  width: 10rpx;
+  color: #FFA500;
+  font-weight: bold;
+}
+.number1 {
+  flex: 1;
+  color: #FFA500;
+  font-weight: bold;
+}
+.title {
+  flex: 1;
+  color: #666;
+  padding: 0rpx 40rpx;
+}
+
+/* 分页控制 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.page-btn {
+  color: #FFA500;
+  padding: 15rpx 30rpx;
+  margin: 0 20rpx;
+}
+
+.page-info {
+  color: #666;
+}
+/* 签证提醒模块 */
+.time-display {
+  background: #FFF8F0; /* 浅橙色背景 */
+  border-radius: 16rpx;
+  padding: 5rpx;
+  margin: 10rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(255,165,0,0.1);
+}
+
+.time-item {
+  display: flex;
+  align-items: center;
+  margin: 5rpx 5rpx;
+  padding: 15rpx;
+  border-bottom: 1rpx dashed #FFD8A5; /* 橙色虚线分隔 */
+}
+
+.time-label {
+  width: 160rpx;
+  color: #FF6B00; /* 深橙色 */
+  font-size: 30rpx;
+  font-weight: 500;
+  letter-spacing: 1rpx;
+}
+.date-input {
+  color: #666;
+  border-bottom: 2rpx solid #FFA500;
+  padding: 10rpx 0;
+}
+
+.progress-container {
+  position: relative;
+  margin: 30rpx 0;
+}
+
+.progress-text {
+  position: absolute;
+  right: 0;
+  top: -10rpx;
+  color: #FFA500;
+  font-weight: bold;
+}
+
+.days-left {
+  text-align: center;
+  color: #666;
+  margin-top: 20rpx;
+}
+.tt-btn {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  margin-left: 40rpx;
+  width: 30%;
+  height: 60rpx;
+  padding: 5px;
+  background-color: #4095E5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* 地址显示区域 - 对应图片中的信息列表上方空白区域 */
+.address-display {
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 25rpx;
+  margin: 20rpx 0;
+  box-shadow: 0 2rpx 8rpx rgba(255,165,0,0.1);
+  border: 1rpx solid #FFE4B5; /* 浅橙色边框 */
+}
+
+/* 地址文字样式 - 严格匹配图片字号和间距 */
+.address-display text {
+  display: block;
+  font-size: 28rpx;  /* 与图片中的"信息"文字相同 */
+  color: #666;       /* 中灰色文字 */
+  line-height: 1.6;
+  margin: 15rpx 0;
+}
+
+/* 地址名称强调样式 */
+.address-display text:first-child {
+  color: #FF6B00;   /* 标题橙色 */
+  font-weight: 500;
+  font-size: 32rpx;  /* 比正文大4rpx */
+}
